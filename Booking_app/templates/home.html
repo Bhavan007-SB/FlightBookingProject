@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'main.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Home Page{% endblock %}</title>
+</head>
+<body>
+
+    <div class="header-bar">
+        <h2>Flights To Flew</h2>
+        <form method="GET" class="d-flex" role="search">
+            <input class="search-input" placeholder="Date"  type="date" name="search-date">
+            <input class="search-input" placeholder="Time"  type="time" name="search-time">
+            <button class="btn btn-success" type="submit">Search Flights</button>
+        </form>
+    </div>
+
+    <div class="flight-list">
+        {% if flights %}
+        {% for flight in flights %}
+
+                <div class="flight-item">
+                    <div class="flightname">
+                        <a href="{% url 'flightdetails' flight.id %}"> {{flight.flightName}}</a>
+                    </div>
+
+                    {{flight.journeyDate}}
+                    {{flight.flightFrom}} -
+                    {{flight.flightTo}}
+                    <a href="{% url 'boooking' flight.pk %}" class="btn btn-primary">Book Now</a>
+                </div>
+
+        {% endfor %}
+        {% else %}
+            <p>No flights found in this time and date.</p>
+        {% endif %}
+
+</div>
+</body>
+{% endblock %}
+</html>

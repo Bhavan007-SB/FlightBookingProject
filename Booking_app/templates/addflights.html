@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'main.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Add flights {% endblock %}</title>
+</head>
+<body>
+    <div class="form-group">
+        <h4>Add Flights</h4>
+        <form method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button class="btn btn-primary">Add</button>
+        </form>
+    </div>
+</body>
+{% endblock %}
+</html>

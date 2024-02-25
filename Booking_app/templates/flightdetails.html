@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'main.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{{flights.flightName}}{% endblock %}</title>
+</head>
+<body>
+    <ul style="list-style-type:none;">
+        <h5>Flight Details</h5>
+        <li>Flight Name - {{flights.flightName}}</li>
+        <li>Flight Number - {{flights.flightNumber}}</li>
+        <li>Journey Date - {{flights.journeyDate}}</li>
+        <li>Depature - {{flights.depatureTime}}</li>
+        <li>Arrival - {{flights.arrivalTime}}</li>
+        <li>From - {{flights.flightFrom}}</li>
+        <li>To - {{flights.flightTo}}</li>
+        <li>Seat count - {{flights.seatcount}}</li>
+        <a style="margin-top:10px;" href="{% url 'boooking' flights.pk %}" class="btn btn-primary">Book Now</a>
+    </ul>
+</body>
+{% endblock %}
+</html>

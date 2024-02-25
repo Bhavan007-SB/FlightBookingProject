@@ -1,0 +1,73 @@
+.content{
+   display : flex;
+   width : 50%;
+   flex-direction : column;
+   align-items : center;
+   justify-content : center;
+   gap : 30px;
+   margin-top : 100px;
+   background : lightblue;
+   padding : 20px 0px;
+   margin-left : 350px;
+   border-radius : 20px;
+}
+
+.hearder-bar{
+    display : flex;
+    flex-direction : row;
+    justify-content : space-between;
+    gap : 70px;
+}
+
+.d-flex{
+    gap:10px;
+}
+
+.search-input{
+    display: block;
+    width: 200px;
+    padding: 10px;
+    font-weight: 400;
+    /*color:*/
+    background-color: white;
+    border-radius: 10px;
+}
+.flight-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.flight-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 100px;
+}
+.header-bar h2{
+    margin-bottom: 10px;
+    margin-left: 150px;
+}
+
+.flightname{
+    display : flex;
+}
+.flightname a{
+    text-decoration : none;
+    color : #4b5156;
+    margin-left : 10px;
+}
+
+.flight-details h3{
+    margin-bottom: 20px;
+    margin-left: 200px;
+}
+
+.card-body{
+    padding : 20px;
+}
+
+label {
+    padding-top : 10px !important;
+    display : block;
+}
+

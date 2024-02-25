@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'main.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}MyBookings{% endblock %}</title>
+</head>
+<body>
+<div class="flight-details">
+    <h3>MyBookings</h3>
+{% for mybooking in bookings %}
+<ul>
+    <h6>Flight Name: {{mybooking.flight}}</h6>
+        Journey Date: {{mybooking.flight.journeyDate}}
+        From: {{mybooking.flight.flightFrom}}
+        To: {{mybooking.flight.flightTo}}
+        Number of seats Booked: {{mybooking.num_seats}}
+</ul>
+
+{% endfor %}
+    </div>
+</body>
+{% endblock %}
+</html>
